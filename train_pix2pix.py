@@ -22,8 +22,8 @@ from pix2pix_discriminator  import pix2pix_discriminator
 import copy
 
 
-writer = SummaryWriter('/content/gdrive/My Drive/gdrive/runs')
-dat_set=px2px_DataSet_h5('train','/content/gdrive/My Drive/gdrive/cityscapes')
+writer = SummaryWriter('/path/runs')
+dat_set=px2px_DataSet_h5('train','/path/cityscapes')
 train_loader = DataLoader(dataset=dat_set, batch_size=1, num_workers=4,shuffle=True)
 
 
@@ -145,7 +145,7 @@ def parse_arguments():
 
 def main(saved_w):
     args=parse_arguments() 
-    for hparam_trial in args.trials(1):
+    for hparam_trial in args.trials(9):
         pix2pix=train_pix2pix(hparam_trial,saved_w)  
         my_model=pix2pix.run() 
     return my_model     
