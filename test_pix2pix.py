@@ -54,7 +54,7 @@ def parse_arguments():
      parser.add_argument('-f')
      parser.add_argument('--num_epochs', type=int, default=1, help='The number of epochs to run') 
      parser.add_argument('--batch_size', type=int, default=3) 
-     parser.add_argument('--save_path', type=str, default='/default/path')
+     parser.add_argument('--save_path', type=str, default='/default/pix2pix_results')
      parser.add_argument('--path', type=str, default='/default/path') 
      return parser.parse_args()
 
