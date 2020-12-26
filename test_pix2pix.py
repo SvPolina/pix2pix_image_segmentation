@@ -36,7 +36,6 @@ class test_pix2pix(object):
       self.plot_results()   
 
   def plot_results(self):  
-      title=[" ".join(str(k)+"="+str(v)+",") for k,v in sorted(vars(self.args).items())]       
       fig,axs = plt.subplots(self.args.batch_size,3,figsize=(10,10), sharex=True, sharey=True)
       for i in range(self.args.batch_size):
           x=self.samp_x[i,:,:,:,]
