@@ -139,7 +139,7 @@ def parse_arguments():
      parser.add_argument('--lambd', type=float,default=100) 
      parser.add_argument('--mean', type=float, default=0.0)
      parser.add_argument('--std', type=float, default=0.02)
-     parser.add_argument('--save_path', type=str, default='/default/path') 
+     parser.add_argument('--save_path', type=str, default='/default/pix2pix_results') 
      parser.add_argument('--path', type=str, default='/default/path') 
      return parser.parse_args()
 
